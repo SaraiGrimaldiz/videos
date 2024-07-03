@@ -1,0 +1,24 @@
+<header>
+    <div class="logo">
+      AndMovies
+    </div>
+    <nav>
+        <a href="/home">
+            <button>Home</button>
+          </a>
+        <a href="/movies">
+        <button>Movies</button>
+        </a>
+        <ng-container *ngIf="user$ | async as user">
+          <a href="/dashboard">
+            <button>Agregar </button>
+          </a>
+          <button (click)="logout()" style="color: white; border-radius: 50%; font-size: 1.2em; background-color: rgb(245, 73, 6);">{{user.email[0]}}</button>
+        </ng-container>
+        <ng-container *ngIf="!(user$ | async)">
+          <a href="/login">
+            <button>Login</button>
+          </a>
+        </ng-container>
+    </nav>
+  </header>

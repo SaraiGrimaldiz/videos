@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div id="contain">
+    <div class="sections">
+      <h2>Últimos Estrenos</h2>
+
+      <div class="search-container">
+        <input type="text" placeholder="Buscar películas" [(ngModel)]="searchText" class="search-input" >
+        <img src="../../assets/lup1.png" alt="Buscar" class="search-icon" (click)="search()">
+      </div>
+
+     
+      <div id="extrenos" class="movie-list" #movieList>
+        <ng-container *ngFor="let movie of filteredMovies; let i = index">
+          <div class="content" (click)="selectMovie(i)" [class.selected]="selectedMovieIndex === i">
+            <div class="container" (click)="reproductor(movie.url)">
+              <img [src]="movie.poster" alt="{{movie.title}}" class="image">
+              <div class="overlay">{{movie.title}}</div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  
+ 
+<app-footer style="bottom: 0;"></app-footer>

@@ -1,0 +1,10 @@
+footer {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #ff6f91, #3b82f6);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Baloo Bhaina 2', cursive;
+  }

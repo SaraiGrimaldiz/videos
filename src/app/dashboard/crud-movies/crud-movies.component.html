@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div id="content">
+    <div id="container">
+        <div id="head">
+            <h1>PELICULAS</h1><br>
+            <a href="/add-movie" style="float: left;"><button style="width: 150px; height: 35px; border: 1px solid rgb(255, 0, 217); background: rgb(255, 0, 166); border-top-left-radius: 5px; border-top-right-radius: 5px; cursor: pointer;"> + SUgiere una pelicula </button></a>
+        </div>
+        <div id="movies">
+            <table id="get">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Poster</th>
+                    <th>Video</th>
+                    <th>Eleccion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let movie of movies">
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.description }}</td>
+                    <td>{{ movie.category }}</td>
+                    <td>{{ movie.poster }}</td>
+                    <td>{{ movie.video }}</td>
+                    <td>
+                        <button *ngIf="movie.id" (click)="deleteMovie(movie.id)">Borrar </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+       
+          
+    </div>
+   
+</div>
+<app-footer></app-footer>

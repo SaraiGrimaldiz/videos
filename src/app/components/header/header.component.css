@@ -1,0 +1,42 @@
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #ff6f91, #3b82f6);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Baloo Bhaina 2', cursive;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  nav a {
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  nav button {
+    background-color: #fff; /* Cambia el fondo de los botones a blanco */
+    color: #3b82f6; /* Color del texto de los botones */
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Baloo Bhaina 2', cursive;
+  }
+  
+  nav button:hover {
+    transform: scale(0.95);
+  
+  }
+
+  
+  
